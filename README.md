@@ -22,5 +22,5 @@ $ docker run --rm \
   --user="$(id -u):$(id -g)" \
   --volume="$PWD/opensim_home_volume:/home/user:rw" \
   -e "DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-  ghcr.io/anibali/opensim
+  docker.pkg.github.com/anibali/docker-opensim/opensim
 ```
