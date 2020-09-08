@@ -24,3 +24,8 @@ $ docker run --rm \
   -e "DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
   docker.pkg.github.com/anibali/docker-opensim/opensim
 ```
+
+
+### Known issues
+
+* The visualizer in the OpenSim GUI does not work.
