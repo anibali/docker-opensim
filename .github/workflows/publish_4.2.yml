@@ -1,0 +1,23 @@
+name: Publish ghcr.io/anibali/opensim:4.2
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 4.2/*
+    - .github/workflows/publish_4.2.yml
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: docker/build-push-action@v1
+      with:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: ghcr.io
+        repository: anibali/opensim
+        tags: 4.2,latest
+        path: 4.2
